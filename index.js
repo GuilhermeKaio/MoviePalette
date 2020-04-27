@@ -1,5 +1,5 @@
-const imdbMovieScrap = require('./scripts/imdbMovieScrap.js')
-const imdbTVScrap = require('./scripts/imdbTVScrap.js')
+const imdbMovieScrap = require('./scripts/imdbmovieScrap.js')
+const imdbTVScrap = require('./scripts/imdbtvScrap.js')
 const info = require('./scripts/info.js')
 const image = require('./scripts/image.js')
 const twitter = require('./scripts/twitter.js')
