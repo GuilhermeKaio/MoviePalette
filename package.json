@@ -19,12 +19,15 @@
   "dependencies": {
     "canvas": "^2.6.1",
     "chroma-js": "^2.1.0",
+    "dotenv": "^8.2.0",
     "get-image-colors": "^2.0.1",
     "googleapis": "^49.0.0",
     "hexsorter": "^1.5.0",
     "image-downloader": "^3.5.0",
     "imdb-api": "^4.0.3",
     "puppeteer": "^3.0.1",
-    "rgb-hex": "^3.0.0"
+    "rgb-hex": "^3.0.0",
+    "twit": "^2.2.11",
+    "unique-random": "^2.1.0"
   }
 }

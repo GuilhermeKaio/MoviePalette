@@ -22,8 +22,8 @@ async function start(info) {
 async function fetchGoogleAndReturnImagesLinks(query) {
     //dotenv.config()
     const response = await customSearch.cse.list({
-        auth: 'AIzaSyCqNjjLi1qqmNOD1ZljMBakv0pZkQD13Ck',
-        cx: '012043904672707755401:khhh1f3vtxo',
+        auth: process.env.apiKey,
+        cx: process.env.searchEngineId,
         q: query + ' Movie Screencaps',
         searchType: 'image',
         num: 5
