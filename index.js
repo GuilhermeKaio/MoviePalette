@@ -1,8 +1,12 @@
-const imdbScrap = require('./scripts/imdbScrap.js')
+const imdbMovieScrap = require('./scripts/imdbMovieScrap.js')
+const imdbTVScrap = require('./scripts/imdbTVScrap.js')
+const info = require('./scripts/info.js')
 
 async function start() {
-    movieList = await imdbScrap()
-    console.log(movieList)
+    List = await imdbMovieScrap()
+    console.log(List)
+    infoList = await info(List[9])
+    console.log(infoList)  
 }
 
 start()

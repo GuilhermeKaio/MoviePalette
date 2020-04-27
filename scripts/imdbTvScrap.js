@@ -1,29 +1,29 @@
 const puppeteer = require('puppeteer')
 
 async function start() {
-    movies = await getMovies()
-    console.log(movies)
+    TV = await getTV()
+    return TV
 }
 
-async function getMovies() {
-    movies = []
-    aux = await scrapMovies()
+async function getTV() {
+    TV = []
+    aux = await scrapTV()
 
     for (let index = 0; index < aux.length; index++) {
         if ((index % 2) == 0) { }
         else {
-            movies.push(aux[index]);
+            TV.push(aux[index]);
         }
     }
-    return movies
+    return TV
 }
 
-async function scrapMovies() {
+async function scrapTV() {
     let scrape = async () => {
         const browser = await puppeteer.launch({ headless: true, args: ["--proxy-server='direct://'", '--proxy-bypass-list=*', '--no-sandbox', '--disable-setuid-sandbox'] })
         const page = await browser.newPage()
         await page.setDefaultNavigationTimeout(0)
-        await page.goto('https://www.imdb.com/chart/moviemeter/')
+        await page.goto('https://www.imdb.com/chart/tvmeter/')
 
         const result = await page.evaluate(() => {
             const books = []
@@ -42,7 +42,5 @@ async function scrapMovies() {
 
     return aux
 }
-
-start()
 
 module.exports = start
